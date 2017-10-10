@@ -1,0 +1,14 @@
+<h1>Friends List</h1>
+
+<% friends.forEach(function(friend){ %>
+    <li>I have a friend named <%= friend %> </li>
+<% }); %>
+
+
+<form action="/addfriend" method="POST">
+    <input type="text" placeholder="name" name="newFriend">
+    <!-- when the button is pressed, this will be sent to the "/addfriend" page through the body of the request
+    so in that request body there will be a property named "newFriend = whatever you typed" -->
+    
+    <button>Make New Friend</button>
+</form>
